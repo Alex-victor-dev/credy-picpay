@@ -21,19 +21,19 @@ public class User {
 	@Id
 	@Column(name = "id", updatable = false, unique = true, nullable = false)
 	private UUID idUser;
-	
+
 	private String firstName;
-	
+
 	private String lastName;
+
 	@Column(unique = true)
-	
 	private String document;
+
 	@Column(unique = true)
-	
 	private String email;
-	
+
 	private BigDecimal balance;
-	
+
 	@Enumerated(EnumType.STRING)
 	private UserType userType;
 
