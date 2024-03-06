@@ -19,9 +19,9 @@ public class UserApplicationService implements UserService {
 	@Override
 	public UserResponse createUser(UserRequest userRequest) {
 		log.info("[start] UserApplicationService - createUser");
-		User user = userRepository.saveUser(new User(userRequest);
+		User user = userRepository.saveUser(new User(userRequest));
 		log.info("[finish] UserApplicationService - createUser");
-		return null;
+		return new UserResponse(user);
 	}
 
 }

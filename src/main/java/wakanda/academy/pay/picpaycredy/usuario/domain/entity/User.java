@@ -39,7 +39,12 @@ public class User {
 	private UserType userType;
 
 	public User(UserRequest userRequest) {
-		// TODO Auto-generated constructor stub
+		this.firstName = userRequest.firstName();
+		this.lastName = userRequest.lastName();
+		this.document = userRequest.document();
+		this.email = userRequest.email();
+		this.balance = userRequest.balance();
+		this.userType = userRequest.userType();
 	}
 
 }
