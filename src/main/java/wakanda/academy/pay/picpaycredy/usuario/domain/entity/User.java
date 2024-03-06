@@ -11,6 +11,7 @@ import jakarta.persistence.Id;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import wakanda.academy.pay.picpaycredy.usuario.application.api.request.UserRequest;
 import wakanda.academy.pay.picpaycredy.usuario.domain.enums.UserType;
 
 @Getter
@@ -36,5 +37,9 @@ public class User {
 
 	@Enumerated(EnumType.STRING)
 	private UserType userType;
+
+	public User(UserRequest userRequest) {
+		// TODO Auto-generated constructor stub
+	}
 
 }
