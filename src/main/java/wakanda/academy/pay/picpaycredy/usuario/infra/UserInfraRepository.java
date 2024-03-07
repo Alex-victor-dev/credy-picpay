@@ -23,8 +23,8 @@ public class UserInfraRepository implements UserRepository {
 		try {
 			userSpringDataJpaRepository.save(user);
 		} catch (DataIntegrityViolationException e) {
-			log.error("Já Existe um cliente Cadastrado com esse Documento ou Email", e);
-			APIException.build(HttpStatus.BAD_REQUEST, "Já Existe um cliente Cadastrado com esse Documento ou Email");
+			log.error("Já Existe um Usuario Cadastrado com esse Documento ou Email", e);
+			throw APIException.build(HttpStatus.BAD_REQUEST, "Já Existe um cliente Cadastrado com esse Documento ou Email");
 		}
 		log.info("[finish] UserInfraRepository - saveUser");
 		return user;
