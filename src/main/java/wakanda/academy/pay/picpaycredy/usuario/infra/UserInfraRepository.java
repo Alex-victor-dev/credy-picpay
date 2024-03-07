@@ -1,7 +1,7 @@
 package wakanda.academy.pay.picpaycredy.usuario.infra;
 
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -9,7 +9,7 @@ import wakanda.academy.pay.picpaycredy.usuario.application.repository.UserReposi
 import wakanda.academy.pay.picpaycredy.usuario.domain.entity.User;
 
 @Log4j2
-@Service
+@Repository
 @RequiredArgsConstructor
 public class UserInfraRepository implements UserRepository {
 
